@@ -1,0 +1,421 @@
+.header {
+  background: #fdfdfd;
+  position: fixed;
+  top: 0;
+  margin-bottom: 2em;
+  z-index: 10;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  height: 60px;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-contain {
+  position: relative;
+  top: 150px;
+  margin-bottom: 300px;
+}
+.box-contain .col-md-8 {
+  padding: 0;
+}
+.box-contain .box {
+  height: 400px;
+  display: flex;
+}
+
+.layout-1, .layout-2 {
+  margin-bottom: 150px;
+}
+
+body {
+  background: url(../images/flower10.jpg), linear-gradient(rgba(37, 37, 37, 0.5), rgba(37, 37, 37, 0.1));
+  background-attachment: fixed;
+  background-position: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  font-size: 20px;
+  color: rgba(56, 56, 56, 0.933);
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 1.2px;
+  font-family: "Roboto", "Open Sans";
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+button:focus {
+  outline: none;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.section,
+section {
+  margin-bottom: 80px;
+}
+
+.col-sm-7 {
+  padding: 0;
+}
+
+#content {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu .line-1, .menu .line-2, .menu .line-3 {
+  background: #000;
+  height: 3px;
+  margin: 3px;
+  border-radius: 200px;
+  transition: width 0.2s ease-in;
+  pointer-events: none;
+}
+.menu .line-1 {
+  width: 30px;
+}
+.menu .line-2 {
+  width: 20px;
+}
+.menu .line-3 {
+  width: 10px;
+}
+.menu:hover .line-1 {
+  width: 10px;
+}
+.menu:hover .line-3 {
+  width: 30px;
+}
+
+#sidebar {
+  background: #e7e8e2;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100vh;
+  z-index: 999;
+  color: #000;
+  transition: left 0.3s ease-out;
+  overflow-y: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+#sidebar.active {
+  left: 0;
+}
+
+.overlay {
+  background: rgba(75, 75, 75, 0.7);
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  opacity: 0;
+  transition: opactiy 0.5s ease-out;
+}
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+#sidebar ul.components {
+  padding: 50px 0;
+  font-family: "Nunito";
+}
+
+#sidebar ul {
+  background: url(../images/flower6.jpg);
+  background-repeat: no-repeat;
+  background-position: 15%;
+  background-size: cover;
+  height: 100vh;
+  padding-left: 20% !important;
+}
+#sidebar ul p {
+  color: #000;
+  font-size: 100%;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+#sidebar ul li a {
+  padding: 15px 0 15px 15px;
+  font-size: 0.8em;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 2px;
+  display: block;
+  opacity: 0.7;
+}
+#sidebar ul li a:hover {
+  color: #e76e89;
+  background: rgba(255, 255, 255, 0.7);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+
+.logo {
+  font-size: 90%;
+  font-family: "Nunito";
+  letter-spacing: 2px;
+}
+
+.caption {
+  background: rgba(117, 255, 209, 0.8);
+  position: absolute;
+  height: 70px;
+  width: 400px;
+  top: -35px;
+  display: flex;
+  z-index: 6;
+}
+.caption span {
+  font-size: 90%;
+  font-style: italic;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.caption span, .caption button {
+  position: relative;
+  left: 2em;
+  color: #fff;
+}
+.caption .btn-arrow {
+  height: 24px;
+  font-size: 110%;
+}
+.caption button i {
+  font-size: 150%;
+  font-weight: 800;
+  animation-iteration-count: infinite;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation-duration: 1s;
+}
+
+.img-1 {
+  top: 20px;
+  left: 20px;
+}
+
+.img-2 {
+  top: 15px;
+  left: 15px;
+}
+
+.img-3 {
+  top: 10px;
+  left: 10px;
+}
+
+.img-4 {
+  top: 5px;
+  left: 5px;
+}
+
+.quote {
+  position: absolute;
+  bottom: 20%;
+  left: 30px;
+}
+.quote > span {
+  position: absolute;
+  top: -60px;
+  transform: rotate(180deg);
+  font-family: "Felix Titling";
+  font-size: 900%;
+  color: rgba(255, 255, 255, 0.45);
+}
+.quote p {
+  position: relative;
+  left: 10px;
+  font-family: "Montserrat";
+  color: #fff;
+  font-size: 110%;
+  font-weight: 300;
+  line-height: 120%;
+  font-style: italic;
+}
+.quote p span {
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.con {
+  font-family: "Monsterrat", "Open Sans";
+  color: #fff;
+}
+
+.con-title {
+  text-align: center;
+  margin-bottom: 5em;
+}
+.con-title h2 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.cat-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 18%;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 2.5px;
+  font-family: "Monsterrat", "Open Sans";
+}
+.cat-title .name {
+  font-size: 70%;
+  text-transform: uppercase;
+}
+.cat-title .design {
+  font-size: 70%;
+  font-weight: 100;
+}
+.cat-title button {
+  border-radius: 0px;
+  color: #fff;
+  padding: 1em 3em;
+  border: 2px solid transparent;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.cat-title button:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.btn {
+  padding: 0;
+  margin: 2em 0 0 0;
+}
+
+.btn-1 button {
+  background: rgba(251, 170, 170, 0.8);
+}
+.btn-1 button:hover {
+  color: #fbaaaa;
+  font-weight: bold;
+  border: 2px solid rgba(251, 170, 170, 0.8);
+}
+
+.btn-2 button {
+  background: rgba(252, 237, 108, 0.8);
+}
+.btn-2 button:hover {
+  color: #fced6c;
+  font-weight: bold;
+  border: 2px solid rgba(252, 237, 108, 0.8);
+}
+
+.btn-3 button {
+  background: rgba(175, 251, 170, 0.8);
+}
+.btn-3 button:hover {
+  color: #affbaa;
+  font-weight: bold;
+  border: 2px solid rgba(175, 251, 170, 0.8);
+}
+
+.btn-4 button {
+  background: rgba(181, 255, 232, 0.8);
+}
+.btn-4 button:hover {
+  color: #b5ffe8;
+  font-weight: bold;
+  border: 2px solid rgba(181, 255, 232, 0.8);
+}
+
+.btn-5 button {
+  background: rgba(14, 224, 248, 0.39);
+}
+.btn-5 button:hover {
+  color: #0ee0f8;
+  font-weight: bold;
+  border: 2px solid rgba(14, 224, 248, 0.39);
+}
+
+.btn-6 button {
+  background: rgba(93, 255, 163, 0.8);
+}
+.btn-6 button:hover {
+  color: #5dffa3;
+  font-weight: bold;
+  border: 2px solid rgba(93, 255, 163, 0.8);
+}
+
+.footer {
+  font-family: "Nunito";
+}
+
+.footer-logo,
+.contact {
+  padding: 2em;
+  text-align: center;
+}
+
+.footer-logo {
+  background: rgba(168, 255, 217, 0.8);
+}
+
+.contact {
+  background: #fff5f5;
+}
+
+.up {
+  background: #b2c7ff;
+  padding: 0.3em;
+  position: fixed;
+  bottom: 10px;
+  right: 25px;
+}
+.up a i {
+  font-size: 150%;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,35 @@
+@import "./variables", "./mixins";
+
+.header {
+  background: $color-bg;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  @include shadow;
+}
+
+header {
+  height: 60px;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-contain {
+  position: relative;
+  top: 150px;
+  margin-bottom: 300px;
+  & .col-md-8 {
+    padding: 0;
+  }
+  & .box {
+    height: 400px;
+    display: flex;
+  }
+}
+
+.layout-1,
+.layout-2 {
+  margin-bottom: 150px;
+}

@@ -1,0 +1,34 @@
+
+// font property
+@mixin font($size, $color, $weight, $line, $spacing, $family) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  line-height: $line;
+  letter-spacing: $spacing;
+  font-family: $family;
+}
+
+// box-shadow
+@mixin shadow {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+// alterante box shadow
+@mixin shadowAlternate {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+// border-radius
+@mixin border-rad($top-left, $top-right, $bottom-right, $bottom-left) {
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+  border-bottom-left-radius: $bottom-left;
+  border-bottom-right-radius: $bottom-right;
+}
+
+// background
+@mixin back($pos, $repeat) {
+  background-position: $pos;
+  background-repeat: $repeat;
+}
